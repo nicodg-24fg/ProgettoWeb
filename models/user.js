@@ -31,6 +31,9 @@ const userSchema = new mongoose.Schema({ username: {
     bio: {
         type: String,
         default: "",
+    },refreshTokens: {
+        type: [String], 
+        default: [] 
     }}, {
     timestamps: true
 });

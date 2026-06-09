@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const gigSchema = new.gigSchema({
+const gigSchema = new mongoose.Schema({
    
     name : {
         type : String,
@@ -18,7 +18,7 @@ const gigSchema = new.gigSchema({
     },
     artistId : {
         type : mongoose.Schema.Types.ObjectId,
-        ref : "Artist",
+        ref : "User",
         required : true
     }, compenso: {
     type: Number,
@@ -26,7 +26,7 @@ const gigSchema = new.gigSchema({
     min: 0
     }, stato: {
     type: String, enum: [ "In cerca di artista", "Confermato", "Cancellato",],
-    default: "in cerca di artista"
+    default: "In cerca di artista"
     }},{ timestamps: true
 });
 

@@ -1,16 +1,16 @@
 const moongoose = require("mongoose");
-const applicationSchema = new moongoose.Schema({
+const applicationSchema = new mongoose.Schema({
     artistaId: {
-        type: moongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         required: true,
     }, gestoreId: {
-        type: moongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         required: true,
 
     }, gigId: {
-        type: moongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Gig",
         required: true,
     },proposta: {
@@ -25,4 +25,4 @@ const applicationSchema = new moongoose.Schema({
         timestamps: true
 });
 
-module.exports = moongoose.model("Application", applicationSchema);
+module.exports = mongoose.model("Application", applicationSchema);
